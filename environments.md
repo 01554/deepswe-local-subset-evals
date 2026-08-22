@@ -6,7 +6,8 @@
 
 Server-side counters are sampled every 10 min during campaigns
 (prefix-cache hit rate, aggregate throughput, MTP draft acceptance);
-observed during the qwen-code campaign: cache 96–97%, draft acceptance 77–91%.
+observed during the qwen-code campaign (124 samples over its 28 h window):
+prefix-cache hit **96.8%** avg, MTP draft acceptance **82.3%** avg (range 74–91%).
 
 Agent sandboxes egress through Pier's squid proxy (allowlist: ports 80/443,
 `dstdomain` only), so the LLM endpoint is exposed on **port 80** under

@@ -67,12 +67,18 @@ for path in sorted(glob.glob("results/*.csv")):
     out.append("| **resolved** | " + " | ".join(totals) + " |")
     out.append("")
 
-lb = ["### Leaderboard", "", "| column | agent | environment | resolved | avg f2p | avg min/task |",
-      "|---|---|---|---:|---:|---:|"]
+lb = ["### Leaderboard", "",
+      "| column | agent | environment | resolved | avg f2p | avg min/task | tool calls/task | errors | reasoning tok/task | output tok/task | cache hit |",
+      "|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|"]
 for env, col, p, n in sorted(summary, key=lambda s: -s[2]):
     m = meta.get(col, {})
     g = lambda k: m.get(k) or "?"
-    lb.append(f"| {disp(col)} | {g('agent')} | {env} | {p}/{n} | {g('avg_f2p')} | {g('avg_min_all113')} |")
+    lb.append(f"| {disp(col)} | {g('agent')} | {env} | {p}/{n} | {g('avg_f2p')} | {g('avg_min_all113')} "
+              f"| {g('avg_tool_calls')} | {g('error_rate')} | {g('avg_reasoning_tok')} | {g('avg_output_tok')} | {g('cache_hit')} |")
+lb.append("")
+lb.append("_`errors` = harness/system errors (counted as unresolved). `cache hit` = server-side prefix-cache "
+          "rate sampled every 10 min across the campaign window. `?` = not captured for that run "
+          "(the qwen-code arm predates per-request usage logging; ATIF trajectories cover it from the mini-swe arm on)._")
 lb.append("")
 out[6:6] = lb
 

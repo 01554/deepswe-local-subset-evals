@@ -24,9 +24,11 @@ _Per-task cells live in [`results/*.csv`](results/); f2p fractions and durations
 
 ### Leaderboard
 
-| column | agent | environment | resolved | avg f2p | avg min/task |
-|---|---|---|---:|---:|---:|
-| [Qwen3.8-27B NVFP4 (Qwen Code)](models/qwen38-27b-nvfp4-qwencode.md) | Qwen Code CLI | rtx6000-96gb | 40/113 | 0.836 | 43.8 |
+| column | agent | environment | resolved | avg f2p | avg min/task | tool calls/task | errors | reasoning tok/task | output tok/task | cache hit |
+|---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| [Qwen3.8-27B NVFP4 (Qwen Code)](models/qwen38-27b-nvfp4-qwencode.md) | Qwen Code CLI | rtx6000-96gb | 40/113 | 0.836 | 43.8 | ? | 5/113 | ? | ? | 96.8% |
+
+_`errors` = harness/system errors (counted as unresolved). `cache hit` = server-side prefix-cache rate sampled every 10 min across the campaign window. `?` = not captured for that run (the qwen-code arm predates per-request usage logging; ATIF trajectories cover it from the mini-swe arm on)._
 
 ## rtx6000-96gb
 
