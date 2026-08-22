@@ -32,12 +32,11 @@ _Per-task cells live in [`results/*.csv`](results/); f2p fractions and durations
 
 | language (tasks) | [Qwen3.8-27B NVFP4 (Qwen Code)](models/qwen38-27b-nvfp4-qwencode.md) |
 |---|---|
-| ? (41) | 13/41 |
-| go (30) | 18/30 |
-| javascript (4) | 0/4 |
-| python (21) | 5/21 |
-| rust (2) | 0/2 |
-| typescript (15) | 4/15 |
+| go (34) | 19/34 |
+| javascript (5) | 0/5 |
+| python (34) | 9/34 |
+| rust (5) | 2/5 |
+| typescript (35) | 10/35 |
 | **resolved** | **40/113** |
 
 <!-- RESULTS:END -->
