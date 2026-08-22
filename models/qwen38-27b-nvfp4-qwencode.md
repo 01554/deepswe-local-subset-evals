@@ -7,7 +7,7 @@
 | agent | Qwen Code CLI (`@qwen-code/qwen-code`), Pier custom agent + proxy shim, `--prompt=` form |
 | cap | task caps ×4 (`--agent-timeout-multiplier 4` → 6 h ceiling); durations recorded per task |
 | score | **40/113 resolved (35.4%)** · avg f2p 0.836 · avg p2p ~0.998 · avg 43.8 min/task |
-| server metrics | prefix-cache hit 96.8% · MTP draft acceptance 82.3% (10-min samples across the 28 h window) |
+| server metrics | prefix-cache hit 96.8% · MTP draft acceptance 81.4% (10-min samples across the 28 h window) |
 | errors | 5/113 (3× NonZeroAgentExitCodeError, 2× no-result — counted as unresolved) |
 | not captured | per-task tool calls, reasoning/output tokens (proxy shim v1 logged no usage; fixed from the mini-swe arm on) |
 
