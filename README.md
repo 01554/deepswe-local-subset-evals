@@ -27,19 +27,20 @@ _Per-task cells live in [`results/*.csv`](results/); f2p fractions and durations
 | column | agent | environment | resolved | avg f2p | avg min/task | tool calls/task | errors | reasoning tok/task | output tok/task | cache hit |
 |---|---|---|---:|---:|---:|---:|---:|---:|---:|---:|
 | [Qwen3.8-27B NVFP4 (Qwen Code)](models/qwen38-27b-nvfp4-qwencode.md) | Qwen Code CLI | rtx6000-96gb | 40/113 | 0.836 | 43.8 | ? | 5/113 | ? | ? | 96.8% |
+| [Qwen3.8-27B NVFP4 (mini-swe)](models/qwen38-27b-nvfp4-miniswe.md) | mini-swe-agent | rtx6000-96gb | 39/113 | 0.703 | 35.0 | 144 | 12/113 | 77k | 119k | 97.4% |
 
 _`errors` = harness/system errors (counted as unresolved). `cache hit` = server-side prefix-cache rate sampled every 10 min across the campaign window. `?` = not captured for that run (the qwen-code arm predates per-request usage logging; ATIF trajectories cover it from the mini-swe arm on)._
 
 ## rtx6000-96gb
 
-| language (tasks) | [Qwen3.8-27B NVFP4 (Qwen Code)](models/qwen38-27b-nvfp4-qwencode.md) |
-|---|---|
-| go (34) | 19/34 |
-| javascript (5) | 0/5 |
-| python (34) | 9/34 |
-| rust (5) | 2/5 |
-| typescript (35) | 10/35 |
-| **resolved** | **40/113** |
+| language (tasks) | [Qwen3.8-27B NVFP4 (Qwen Code)](models/qwen38-27b-nvfp4-qwencode.md) | [Qwen3.8-27B NVFP4 (mini-swe)](models/qwen38-27b-nvfp4-miniswe.md) |
+|---|---|---|
+| go (34) | 19/34 | 11/34 |
+| javascript (5) | 0/5 | 1/5 |
+| python (34) | 9/34 | 18/34 |
+| rust (5) | 2/5 | 1/5 |
+| typescript (35) | 10/35 | 8/35 |
+| **resolved** | **40/113** | **39/113** |
 
 <!-- RESULTS:END -->
 

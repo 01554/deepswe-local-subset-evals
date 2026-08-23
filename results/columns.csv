@@ -1,2 +1,3 @@
 column,agent,avg_min_all113,avg_f2p,avg_tool_calls,error_rate,avg_reasoning_tok,avg_output_tok,cache_hit,ctx,sampling,timeout_aware,display,url,page
-qwen38_27b_nvfp4_qwencode_cap21600,Qwen Code CLI,43.8,0.836,,5/113,,,96.8%,131072,temp 0.6 / top-p 0.95 + MTP + prefix cache,1,Qwen3.8-27B NVFP4 (Qwen Code),https://huggingface.co/unsloth/Qwen3.8-27B-NVFP4,models/qwen38-27b-nvfp4-qwencode.md
+qwen38_27b_nvfp4_qwencode_cap21600,Qwen Code CLI,43.8,0.836,,5/113,,,96.8%,262144,temp 0.6 / top-p 0.95 + MTP + prefix cache,1,Qwen3.8-27B NVFP4 (Qwen Code),https://huggingface.co/unsloth/Qwen3.8-27B-NVFP4,models/qwen38-27b-nvfp4-qwencode.md
+qwen38_27b_nvfp4_miniswe_cap21600,mini-swe-agent,35.0,0.703,144,12/113,77k,119k,97.4%,262144,temp 0.6 / top-p 0.95 + MTP + prefix cache,1,Qwen3.8-27B NVFP4 (mini-swe),https://huggingface.co/unsloth/Qwen3.8-27B-NVFP4,models/qwen38-27b-nvfp4-miniswe.md

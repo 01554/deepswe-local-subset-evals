@@ -19,5 +19,6 @@ through a localhost forwarder shim instead (see the pilot notes).
 <!-- RUNCONDITIONS:BEGIN -->
 | column | agent | ctx | sampling | avg min/task |
 |---|---|---|---|---:|
-| qwen38_27b_nvfp4_qwencode_cap21600 | Qwen Code CLI | 131072 | temp 0.6 / top-p 0.95 + MTP + prefix cache | 43.8 |
+| qwen38_27b_nvfp4_qwencode_cap21600 | Qwen Code CLI | 262144 | temp 0.6 / top-p 0.95 + MTP + prefix cache | 43.8 |
+| qwen38_27b_nvfp4_miniswe_cap21600 | mini-swe-agent | 262144 | temp 0.6 / top-p 0.95 + MTP + prefix cache | 35.0 |
 <!-- RUNCONDITIONS:END -->
