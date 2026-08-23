@@ -1,0 +1,134 @@
+[
+ {
+  "task": "claude-code-by-agents-recursive-delegation",
+  "lang": "typescript",
+  "q": true,
+  "m": true,
+  "mean_min": 14.2,
+  "q_min": "15.5",
+  "m_min": "12.8",
+  "q_f2p": "1.0",
+  "m_f2p": "1.0"
+ },
+ {
+  "task": "anko-typed-variable-bindings",
+  "lang": "go",
+  "q": true,
+  "m": true,
+  "mean_min": 18.8,
+  "q_min": "14.9",
+  "m_min": "22.6",
+  "q_f2p": "1.0",
+  "m_f2p": "1.0"
+ },
+ {
+  "task": "httpx-multipart-response-parsing",
+  "lang": "python",
+  "q": true,
+  "m": true,
+  "mean_min": 21.8,
+  "q_min": "20.5",
+  "m_min": "23.1",
+  "q_f2p": "1.0",
+  "m_f2p": "1.0"
+ },
+ {
+  "task": "boa-hierarchical-evaluation-cancellation",
+  "lang": "rust",
+  "q": true,
+  "m": true,
+  "mean_min": 49.7,
+  "q_min": "50.8",
+  "m_min": "48.6",
+  "q_f2p": "1.0",
+  "m_f2p": "1.0"
+ },
+ {
+  "task": "helm-unified-manifest-stream",
+  "lang": "go",
+  "q": true,
+  "m": true,
+  "mean_min": 64.8,
+  "q_min": "95.7",
+  "m_min": "34.0",
+  "q_f2p": "1.0",
+  "m_f2p": "1.0"
+ },
+ {
+  "task": "anko-default-function-arguments",
+  "lang": "go",
+  "q": true,
+  "m": true,
+  "mean_min": 136.9,
+  "q_min": "239.3",
+  "m_min": "34.5",
+  "q_f2p": "1.0",
+  "m_f2p": "1.0"
+ },
+ {
+  "task": "ts-pattern-match-each",
+  "lang": "typescript",
+  "q": false,
+  "m": false,
+  "mean_min": 18.4,
+  "q_min": "16.0",
+  "m_min": "20.9",
+  "q_f2p": "0.0",
+  "m_f2p": "0.0"
+ },
+ {
+  "task": "abs-module-cache-flags",
+  "lang": "go",
+  "q": false,
+  "m": false,
+  "mean_min": 19.0,
+  "q_min": "21.4",
+  "m_min": "16.7",
+  "q_f2p": "0.65",
+  "m_f2p": "0.95"
+ },
+ {
+  "task": "testem-per-launcher-reports",
+  "lang": "javascript",
+  "q": false,
+  "m": false,
+  "mean_min": 19.6,
+  "q_min": "19.7",
+  "m_min": "19.6",
+  "q_f2p": "0.985",
+  "m_f2p": "0.985"
+ },
+ {
+  "task": "opa-template-string-reconstruction",
+  "lang": "go",
+  "q": false,
+  "m": false,
+  "mean_min": 88.0,
+  "q_min": "108.8",
+  "m_min": "67.2",
+  "q_f2p": "0.4",
+  "m_f2p": "0.0"
+ },
+ {
+  "task": "valibot-recursive-schema-composition",
+  "lang": "typescript",
+  "q": false,
+  "m": false,
+  "mean_min": 98.5,
+  "q_min": "146.0",
+  "m_min": "51.0",
+  "q_f2p": "0.7",
+  "m_f2p": "0.0"
+ },
+ {
+  "task": "textual-kitty-key-phases",
+  "lang": "python",
+  "q": false,
+  "m": false,
+  "mean_min": 114.6,
+  "q_min": "185.9",
+  "m_min": "43.3",
+  "q_f2p": "0.0",
+  "m_f2p": "0.0"
+ }
+]
