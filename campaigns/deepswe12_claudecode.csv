@@ -1,0 +1,13 @@
+task_id,resolved,f2p,p2p,minutes,error,tool_calls,prompt_tok,cached_tok,output_tok,reasoning_chars
+abs-module-cache-flags,1,1.0,1.0,91.4,,136,10003394,0,68167,163347
+anko-default-function-arguments,0,0.5,1.0,96.5,,159,14890652,0,144297,401763
+anko-typed-variable-bindings,1,1.0,1.0,115.2,,130,9384889,0,82918,164764
+boa-hierarchical-evaluation-canc,1,1.0,1.0,176.3,,196,17562882,0,127518,370066
+claude-code-by-agents-recursive,0,0.286,1.0,41.1,,64,4412235,0,61055,191052
+helm-unified-manifest-stream,0,0.6,1.0,193.2,,215,19850064,0,145330,455887
+httpx-multipart-response-parsing,0,0.992,1.0,107.2,,92,8771930,0,93236,277084
+opa-template-string-reconstructi,0,0.0,1.0,113.5,,82,5339280,0,150756,583527
+testem-per-launcher-reports,1,1.0,1.0,101.9,,112,9862687,0,63572,149924
+textual-kitty-key-phases,0,0.0,1.0,70.1,,19,843429,0,65991,241228
+ts-pattern-match-each,1,1.0,1.0,92.7,,76,6018843,0,77014,205921
+valibot-recursive-schema-composi,1,1.0,1.0,359.4,,276,22903602,0,260688,742609

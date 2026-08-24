@@ -44,6 +44,40 @@ _`errors` = harness/system errors (counted as unresolved). `cache hit` = server-
 
 <!-- RESULTS:END -->
 
+## deepswe12 — 5-harness shootout on a fixed 12-task subset
+
+Built from the two full campaigns: 6 tasks **both** harnesses resolved ("OK") and
+6 tasks **neither** resolved ("NG"), each 3 shortest + 3 longest by mean minutes
+([selection](campaigns/deepswe12_selection.json)). Same model/serving for all
+five harnesses (Qwen3.8-27B NVFP4, temp 0.6, MTP, prefix cache, cap ×4), pass@1.
+
+| harness | resolved | OK-group | NG-group | avg min/task | empty patches |
+|---|---:|---:|---:|---:|---:|
+| qwen-code † | 6/12 | 6/6 | 0/6 | 77.9 | — |
+| mini-swe † | 6/12 | 6/6 | 0/6 | 32.9 | — |
+| OpenCode | 3/12 | 2/6 | 1/6 | 32.0 | 4 |
+| **Claude Code** | **6/12** | 2/6 | **4/6** | 129.9 | 0 |
+| pi | 5/12 | 3/6 | 2/6 | **27.3** | 4 |
+
+† reference values from the full-113 campaigns (the subset is defined by these two).
+
+Findings ([per-task CSVs](campaigns/)):
+
+- **Claude Code cracked 4 of the 6 "neither-solved" tasks** (abs-module-cache-flags,
+  testem-per-launcher-reports, ts-pattern-match-each, valibot-recursive-schema-composition —
+  the last at 359 min, just under the 6 h cap), at ~4× the wall-clock of the fastest
+  harnesses. It paradoxically dropped 4 of the 6 "easy" tasks (httpx at f2p 0.992).
+- pi is the **fastest** harness (27 min avg) and still took 2 NG tasks; its single-shot
+  `-p` loop ends on the first non-tool-call response.
+- **Empty patches** (agent never committed → graded 0 regardless of work done):
+  OpenCode 4/12, pi 4/12, Claude Code 0/12. The task instructions end with an explicit
+  "commit everything" — instruction-following is worth points here.
+- Union of all five harnesses: **10/12** — only opa-template-string-reconstruction and
+  textual-kitty-key-phases resisted everyone.
+- Solve-time gradient (mini-swe 33 min → qwen-code 78 → Claude Code 130) tracks
+  NG-group success (0 → 0 → 4): on this model, harder tasks fall when the harness
+  lets the model spend longer.
+
 - Environment & serving conditions: [`environments.md`](environments.md)
 - Per-model/harness commentary: [`models/`](models/)
 - Raw per-task data (f2p fractions, minutes, errors): [`campaigns/`](campaigns/)
